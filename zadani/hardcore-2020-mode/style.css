@@ -1,0 +1,133 @@
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e5e5e5;
+    box-shadow: 1px 1px 20px black;
+}
+.jedna {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.vlastnost {
+    padding: 0.5rem;
+}
+h2,
+.hlavicka {
+    color: #48418e;
+}
+.hlavicka {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+h1 {
+    font-weight: 400;
+    font-size: 30px;
+}
+.motto {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+li {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    list-style-type: none;
+}
+ul {
+    padding-inline-start: 0;
+}
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+li:hover {
+    background: linear-gradient(90deg, rgba(72,65,142,1) 0%, rgba(72,65,142,1) 35%, rgba(37,19,61,1) 100%);
+}
+.hlavni {
+    background: linear-gradient(90deg, rgba(37,19,61,1) 0%, rgba(72,65,142,1) 35%, rgba(170,84,119,1) 100%);
+    color: white;
+    padding: 1rem;
+}
+.textova {
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.5;
+}
+img {
+    width: 50px;
+}
+.paticka {
+    background-color: #48418e;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 0.5rem;
+}
+.telefon {
+    display: none;
+}
+/*VERZE M*/
+@media (min-width: 765px) {
+    .hlavicka {
+        display: flex;
+        justify-content: left;
+    }
+    .hlava {
+        display: flex;
+    }
+   ul {
+       display: flex;
+   }
+   li:hover {
+    background-color: violet;
+    }
+    .stahuj {
+        margin-right: 1.5rem;
+    }
+    .textova {
+        display: flex;
+    }
+    .cestuj,
+    .chatuj,
+    .zazij {
+        padding: 0.5rem;
+    }
+}
+
+
+/*VERZE L*/
+@media (min-width: 1025px) and (max-width: 2000px) {
+    .hlavni {
+        display: flex;
+        justify-content: space-between;
+    }
+    .telefon {
+        width: 270px;
+        display: flex;
+        align-self: right;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .hlavni {
+        padding: 0;
+    }
+    .levy {
+        padding-left: 1rem;
+    }
+    .pravy {
+        padding: 0;
+        padding-top: 0.3rem;
+        margin: 0;
+    }
+    
+}
