@@ -13,16 +13,27 @@ body {
 }
 .vlastnost {
     padding: 0.5rem;
+    list-style-type: none;
 }
 h2,
 .hlavicka {
     color: #48418e;
 }
 .hlavicka {
-    padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    margin: 0;
+    flex-wrap: wrap;
+}
+.jedna,
+.dve,
+.tri,
+.ctyri {
+    flex: 1 1 50%;
     text-align: center;
+}
+.hlavicka li:hover {
+    color: white;
+    /* (Toto nefunguje, stále si to bere pozadí s gradinetem z li:hover níže) background-color:#48418e; */
 }
 h1 {
     font-weight: 400;
@@ -33,12 +44,16 @@ h1 {
     font-size: 20px;
     margin-bottom: 1rem;
 }
-li {
+.stahuj,
+.info {
     border: 2px solid white;
     border-radius: 15px;
     padding: 1rem;
     text-align: center;
     list-style-type: none;
+}
+.stahuj {
+    background-color: #48418e;
 }
 ul {
     padding-inline-start: 0;
@@ -52,6 +67,10 @@ a {
 li:hover {
     background: linear-gradient(90deg, rgba(72,65,142,1) 0%, rgba(72,65,142,1) 35%, rgba(37,19,61,1) 100%);
 }
+/* (Toto mi nefunguje - nevím proč)
+.stahuj li:hover {
+    background-color:none;
+} */
 .hlavni {
     background: linear-gradient(90deg, rgba(37,19,61,1) 0%, rgba(72,65,142,1) 35%, rgba(170,84,119,1) 100%);
     color: white;
@@ -77,9 +96,14 @@ img {
 }
 /*VERZE M*/
 @media (min-width: 765px) {
-    .hlavicka {
-        display: flex;
-        justify-content: left;
+    .jedna,
+    .dve,
+    .tri,
+    .ctyri {
+        flex-grow: 0;
+        flex-basis: auto;
+        justify-content: flex-start;
+        text-align: left;
     }
     .hlava {
         display: flex;
@@ -87,9 +111,6 @@ img {
    ul {
        display: flex;
    }
-   li:hover {
-    background-color: violet;
-    }
     .stahuj {
         margin-right: 1.5rem;
     }
@@ -100,7 +121,20 @@ img {
     .chatuj,
     .zazij {
         padding: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+    .bublina {
+        order: 1;
+        flex-basis: 100%;
+    }
+    h2 {
+        order: 2;
+    }
+    .text {
+        order: 3;
+    }  
 }
 
 
