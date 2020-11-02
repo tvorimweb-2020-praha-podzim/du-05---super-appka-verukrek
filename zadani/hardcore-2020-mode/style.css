@@ -2,18 +2,20 @@ html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     box-shadow: 1px 1px 20px black;
-    max-width: 2000px;
+}
+.section {
+    max-width: 1500px;
 }
 .jedna {
     text-transform: uppercase;
     font-weight: bold;
 }
 .vlastnost {
-    padding: 0.5rem;
+    padding: 1rem;
     list-style-type: none;
     flex: 1 1 50%;
     text-align: center;
@@ -27,7 +29,7 @@ h2,
     margin: 0;
     flex-wrap: wrap;
 }
-.hlavicka li:hover {
+.vlastnost:hover {
     color: white;
     background:#48418e; 
 }
@@ -128,13 +130,13 @@ img {
 
 
 /*VERZE L*/
-@media (min-width: 1025px) and (max-width: 2000px) {
+@media (min-width: 1025px) {
     .hlavni {
         display: flex;
         justify-content: space-between;
     }
     .telefon {
-        width: 270px;
+        width: fit-content;
         display: flex;
         align-self: right;
     }
